@@ -1,0 +1,76 @@
+body {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.nav {
+  &__logo-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 10vh;
+  }
+
+  &__logo-img {
+    width: 10rem;
+  }
+
+  &__mohan-mobile {
+    width: 3rem;
+    height: 3rem;
+    border-radius: 100%;
+  }
+
+  &__search-wrapper {
+    display: flex;
+    justify-content: space-evenly;
+  }
+
+  &__search {
+    width: 70%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__input {
+    width: 90%;
+    background: url(../../assets/icons/search.svg);
+    background-repeat: no-repeat;
+    background-position: left;
+    height: 30px;
+    padding-left: 25px;
+    border-radius: 0.5rem;
+  }
+
+  &__btn {
+    width: 90%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__btn-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    flex-direction: row;
+  }
+
+  &__anchor {
+    width: 100%;
+    height: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #0095ff;
+    border-radius: 0.5rem;
+    text-decoration: none;
+  }
+
+  &__upload {
+    color: white;
+  }
+}
