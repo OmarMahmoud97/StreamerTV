@@ -1,7 +1,7 @@
 import "./NavBar.scss";
 import AvatarImg from '../../assets/images/Mohan-muruge.jpg';
 import NavLogo from '../../assets/logo/BrainFlix-logo.svg'
-
+import "../../styles/ScssStyles/Resets.scss";
 
 export default function NavBar() {
   return (

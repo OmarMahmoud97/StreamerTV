@@ -1,8 +1,6 @@
-body {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
+@use "../../styles/ScssStyles/Resets.scss";
+@import "../../styles/ScssStyles/Variables.scss";
+@import "../../styles/ScssStyles/Mixin.scss";
 
 .nav {
   &__logo-wrapper {
@@ -35,7 +33,7 @@ body {
   }
 
   &__input {
-    width: 90%;
+    width: 100%;
     background: url(../../assets/icons/search.svg);
     background-repeat: no-repeat;
     background-position: left;
@@ -65,7 +63,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: #0095ff;
+    background-color: $primarycolor2;
     border-radius: 0.5rem;
     text-decoration: none;
   }
