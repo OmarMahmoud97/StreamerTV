@@ -1,7 +1,8 @@
 import "./NavBar.scss";
 import AvatarImg from '../../assets/images/Mohan-muruge.jpg';
-import NavLogo from '../../assets/logo/BrainFlix-logo.svg'
-import "../../styles/ScssStyles/Resets.scss";
+import UploadImg from '../../assets/icons/upload.svg';
+import NavLogo from '../../assets/logo/BrainFlix-logo.svg';
+
 
 export default function NavBar() {
   return (
@@ -23,7 +24,7 @@ export default function NavBar() {
         <div className="nav__btn-wrapper">
           <div className="nav__btn">
             <a href="google.com" className="nav__anchor" >
-              <p className="nav__upload">Upload</p>
+            <img className="nav__upload" src={UploadImg} alt="Upload link"></img><p className="nav__upload-text">Upload</p> 
             </a>
           </div>
         </div>

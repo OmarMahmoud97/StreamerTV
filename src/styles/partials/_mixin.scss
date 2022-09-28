@@ -1,5 +1,7 @@
 @import "./Variables.scss";
+@import "./fonts";
 
+// Media Queries
 @mixin media-tablet {
   @media screen and (min-width: $tablet-breakpoint) {
     @content;
@@ -11,6 +13,22 @@
     @content;
   }
 }
+
+// Typography
+
+@mixin font-normal {
+  font-family: "AvenirNext";
+  font-weight: 400;
+  font-style: normal;
+}
+
+@mixin font-bold {
+  font-family: "AvenirNext";
+  font-weight: 700;
+  font-style: normal;
+}
+
+// Display
 
 @mixin flex-center {
   display: flex;

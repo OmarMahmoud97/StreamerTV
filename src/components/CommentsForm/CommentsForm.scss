@@ -1,0 +1,72 @@
+@use "../../styles/partials/resets.scss";
+@use "../../styles/partials/variables.scss";
+@use "../../styles/partials/mixin.scss" as *;
+
+.form {
+  &__wrapper {
+    display: flex;
+    padding: 0 1rem;
+    justify-content: center;
+  }
+
+  &__input-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+
+  &__input {
+    height: 8rem;
+    margin-bottom: 1rem;
+    width: 14rem;
+    padding: 0.5rem;
+  }
+
+  &__label {
+    width: 100%;
+    color: $primarycolor3;
+  }
+
+  &__btn-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    flex-direction: row;
+  }
+
+  &__btn {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__btn-anchor {
+    width: 100%;
+    height: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    background-color: #0095ff;
+    border-radius: 0.5rem;
+    text-decoration: none;
+    padding: 1rem;
+    color: #ffffff;
+  }
+
+  &__btn-text {
+    width: 100%;
+    text-align: center;
+    font-weight: bold;
+  }
+
+  &__avatar {
+    width: 2rem;
+    height: 2rem;
+    border-radius: 100%;
+    object-fit: cover;
+    margin: 0 0.5rem 0 0;
+  }
+}

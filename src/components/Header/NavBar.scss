@@ -1,6 +1,6 @@
-@use "../../styles/ScssStyles/Resets.scss";
-@import "../../styles/ScssStyles/Variables.scss";
-@import "../../styles/ScssStyles/Mixin.scss";
+@use "../../styles/partials/resets.scss";
+@use "../../styles/partials/variables.scss";
+@use "../../styles/partials/mixin.scss" as *;
 
 .nav {
   &__logo-wrapper {
@@ -15,9 +15,10 @@
   }
 
   &__mohan-mobile {
-    width: 3rem;
-    height: 3rem;
+    width: 2rem;
+    height: 2rem;
     border-radius: 100%;
+    object-fit: cover;
   }
 
   &__search-wrapper {
@@ -37,8 +38,7 @@
     background: url(../../assets/icons/search.svg);
     background-repeat: no-repeat;
     background-position: left;
-    height: 30px;
-    padding-left: 25px;
+    padding: 0.5rem 2rem;
     border-radius: 0.5rem;
   }
 
@@ -62,13 +62,21 @@
     height: 3rem;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
     background-color: $primarycolor2;
     border-radius: 0.5rem;
     text-decoration: none;
+    padding: 1rem;
+    color: $primarycolor4;
   }
 
   &__upload {
     color: white;
+  }
+
+  &__upload-text {
+    width: 100%;
+    text-align: center;
+    font-weight: bold;
   }
 }
