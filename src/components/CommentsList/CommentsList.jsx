@@ -1,10 +1,19 @@
-import "./CommentsList.scss";
-
+import "./CommentsList.scss"
 import VideoDetails from "../../Data/video-details.json"
 
 import React from 'react'
 
 export default function CommentsList() {
+
+const formatDate = (timestamp) => {
+  const formatedDate = new Date(timestamp).toDateString("en-",
+      {
+        day: "2-digit",
+        month: "2-digit",
+        year: "numeric",
+      });
+  return formatedDate;
+};
 
 const comments = VideoDetails[0].comments
 
@@ -25,7 +34,7 @@ const comments = VideoDetails[0].comments
             <div className="comment__data">
               <div className="comment__name"><p>{ comment.name }</p>
             </div>
-              <div className="comment__date"><p>{ comment.timestamp }</p>
+              <div className="comment__date"><p>{formatDate(comment.timestamp)  }</p>
             </div>
             </div>
             <div className="comment__comment"><p>{ comment.comment }</p>

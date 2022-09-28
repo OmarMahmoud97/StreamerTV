@@ -1,13 +1,13 @@
 import React from "react";
-import "./Videos.scss"
+import "./Video.scss"
 
 export default function VideoClip(props) {
   return (
     <section className="video">
     <div className="video__main">
         <img
-          className="Video__video"
-        src={props.MainProfileVid}
+          className="video__video"
+        src={props.mainProfileVid}
         alt={`${props.title}`}
       />
       </div>
