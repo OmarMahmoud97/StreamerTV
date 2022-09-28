@@ -9,8 +9,6 @@ import { useState } from "react";
 export function App() {
   const [currentVideo, setCurrentVideo] = useState(MainProfileVid[0]);
 
-  // let { name, comment, likes, timestamp } = VideoDetails;
-  console.log(VideoDetails);
   return (
     <>
       <Navbar />
