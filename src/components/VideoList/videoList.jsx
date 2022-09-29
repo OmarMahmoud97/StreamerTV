@@ -13,13 +13,16 @@ const filteredVideos = sideDetails.filter(
   );
 return (
   <div className="List">
+    <div className="list__header">
+      <p>NEXT VIDEOS</p>
+    </div>
     <ul className="List__wrapper">
       {filteredVideos.map((props) => {          
           return (
             <VideoItem
               key={props.id}
               image={props.image}
-              sideVideoClickHandler={props.VideoListItemClickHandler}
+              sideVideoClickHandler={props.sideVideoClickHandler}
               channel={props.channel}
               title={props.title}
             />

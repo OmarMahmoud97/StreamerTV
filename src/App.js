@@ -6,6 +6,7 @@ import CommentsList from "./components/CommentsList/CommentsList";
 import MainProfileVid from "./Data/videos.json";
 import { useState } from "react";
 import VideoList from "./components/VideoList/videoList";
+import VideoInfo from "./components/VideoInfo/VideoInfo";
 
 export function App() {
   const [currentVideo, setCurrentVideo] = useState(MainProfileVid[0]);
@@ -23,7 +24,12 @@ export function App() {
         title={currentVideo.title}
         channel={currentVideo.channel}
       />
-
+      <VideoInfo
+        views={currentVideo.views}
+        timestamp={currentVideo.timestamp}
+        likes={currentVideo.likes}
+        description={currentVideo.description}
+      />
       <CommentsForm />
       <CommentsList currentVideo={currentVideo} />
       <VideoList

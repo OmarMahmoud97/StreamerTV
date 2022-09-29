@@ -13,6 +13,7 @@ export default function NavBar() {
             <img src={NavLogo} alt="logo" className="nav__logo-img" />
           </div>
         </div>
+        <div className="nav__content-wrapper">
         <div className="nav__search-wrapper">
           <div className="nav__search">
             <input className="nav__input" type="text" name="input" id="search" placeholder="Search" />
@@ -21,14 +22,18 @@ export default function NavBar() {
             <img className="nav__mohan-mobile" src={AvatarImg} alt="img" />
           </div>
         </div>
-        <div className="nav__btn-wrapper">
+        <dv className="nav__btn-wrapper">
           <div className="nav__btn">
             <a href="google.com" className="nav__anchor" >
             <img className="nav__upload" src={UploadImg} alt="Upload link"></img><p className="nav__upload-text">Upload</p> 
             </a>
           </div>
+        </dv>
+        <div className="nav__avatar-tablet">
+            <img className="nav__mohan-tablet" src={AvatarImg} alt="img" />
+          </div>
         </div>
-      </div>
+        </div>
     </nav>
   );
 }
