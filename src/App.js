@@ -7,6 +7,7 @@ import MainProfileVid from "./Data/videos.json";
 import { useState } from "react";
 import VideoList from "./components/VideoList/videoList";
 import VideoInfo from "./components/VideoInfo/VideoInfo";
+import "./components/Component/component.scss";
 
 export function App() {
   const [currentVideo, setCurrentVideo] = useState(MainProfileVid[0]);
@@ -24,24 +25,31 @@ export function App() {
         title={currentVideo.title}
         channel={currentVideo.channel}
       />
-      <VideoInfo
-        channel={currentVideo.channel}
-        views={currentVideo.views}
-        timestamp={currentVideo.timestamp}
-        likes={currentVideo.likes}
-        description={currentVideo.description}
-      />
-      <CommentsForm />
-      <CommentsList
-        currentVideo={currentVideo}
-        name={currentVideo.name}
-        timestamp={currentVideo.timestamp}
-        comment={currentVideo.comment}
-      />
-      <VideoList
-        sideVideoClickHandler={sideVideoClickHandler}
-        currentVideoId={currentVideo.id}
-      />
+      <div className="main">
+        <div className="main__text-container ">
+          <VideoInfo
+            channel={currentVideo.channel}
+            views={currentVideo.views}
+            timestamp={currentVideo.timestamp}
+            likes={currentVideo.likes}
+            description={currentVideo.description}
+          />
+          <CommentsForm />
+
+          <CommentsList
+            currentVideo={currentVideo}
+            name={currentVideo.name}
+            timestamp={currentVideo.timestamp}
+            comment={currentVideo.comment}
+          />
+        </div>
+        <div className="main__list-container">
+          <VideoList
+            sideVideoClickHandler={sideVideoClickHandler}
+            currentVideoId={currentVideo.id}
+          />
+        </div>
+      </div>
     </>
   );
 }

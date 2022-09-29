@@ -3,16 +3,30 @@
 @use "../../styles/partials/mixin.scss" as *;
 
 .form {
+  @include flex-center;
+  justify-content: center;
   &__wrapper {
     display: flex;
     padding: 0 1rem 0 0;
     justify-content: center;
+    @include media-tablet {
+      width: 90%;
+      padding: 0;
+    }
   }
 
   &__input-wrapper {
     @include flex-center;
     justify-content: center;
     flex-direction: column;
+    @include media-tablet {
+      flex-direction: row;
+      width: 100%;
+    }
+  }
+
+  &__input-container {
+    width: 95%;
   }
 
   &__input {
@@ -20,11 +34,31 @@
     margin-bottom: 1rem;
     width: 15rem;
     padding: 0.5rem;
+    border-radius: 0.5rem;
+    @include media-tablet {
+      height: 2.25rem;
+      width: 100%;
+      margin: 0;
+    }
+  }
+
+  &__input-box {
+    width: 100%;
+    @include media-tablet {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+    }
   }
 
   &__label {
     width: 100%;
     color: $primarycolor3;
+    @include media-tablet {
+      width: 40%;
+      font-size: 0.8rem;
+    }
   }
 
   &__btn-wrapper {
@@ -32,6 +66,9 @@
     justify-content: center;
     width: 100%;
     flex-direction: row;
+    @include media-tablet {
+      width: 25%;
+    }
   }
 
   &__btn {
@@ -50,6 +87,10 @@
     text-decoration: none;
     padding: 1rem;
     color: #ffffff;
+    @include media-tablet {
+      height: 2rem;
+      margin-top: 0.9rem;
+    }
   }
 
   &__btn-text {
@@ -69,5 +110,9 @@
     display: flex;
     justify-content: center;
     width: 100%;
+    @include media-tablet {
+      width: 10%;
+      align-items: center;
+    }
   }
 }

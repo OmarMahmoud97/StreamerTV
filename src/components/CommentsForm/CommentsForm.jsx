@@ -39,7 +39,7 @@ export default function CommentsForm() {
         </div>
         <div className="form__input-wrapper">
           <div className="form__input-box">
-            <div className="form__input-wrapper">
+            <div className="form__input-container">
               <label className="form__label" htmlFor="comment">JOIN THE CONVERSATION</label>
               <textarea className="form__input"
                 type="text"

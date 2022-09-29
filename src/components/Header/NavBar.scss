@@ -11,7 +11,7 @@
   &__wrapper {
     @include media-tablet {
       display: flex;
-      justify-content: space-between;
+      justify-content: center;
     }
 
     @include media-desktop {
