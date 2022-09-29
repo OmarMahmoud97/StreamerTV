@@ -1,0 +1,60 @@
+@use "../../styles/partials/resets.scss";
+@use "../../styles/partials/variables.scss";
+@use "../../styles/partials/mixin.scss" as *;
+
+.video {
+  &__details {
+    @include flex-center;
+    justify-content: center;
+    flex-direction: column;
+  }
+
+  &__details-container {
+    width: 90%;
+  }
+
+  &__container {
+    width: 90%;
+  }
+
+  &__wrapper {
+    display: flex;
+    border-bottom: 1px solid $secondarycolor3;
+    padding: 1rem 0;
+    margin-bottom: 1rem;
+  }
+
+  &__name-wrapper,
+  &__views-wrapper,
+  &__date-wrapper,
+  &__likes-wrapper {
+    display: flex;
+    flex-direction: row;
+  }
+
+  &__name,
+  &__views,
+  &__date,
+  &__likes {
+    font-weight: bold;
+    color: $primarycolor3;
+  }
+
+  &__name {
+    font-weight: bold;
+    color: $primarycolor;
+  }
+
+  &__details-items {
+    width: 50%;
+
+    height: 10vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+  }
+
+  &__description {
+    margin-bottom: 1rem;
+  }
+}

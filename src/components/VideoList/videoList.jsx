@@ -11,7 +11,7 @@ const filteredVideos = sideDetails.filter(
     (video) => video.id !== props.currentVideoId
   );
 return (
-  <div className="List">
+  <div className="list">
     <div className="list__container">
     <div className="list__header">
       <p>NEXT VIDEOS</p>
@@ -23,9 +23,10 @@ return (
               key={video.id}
               id={video.id}
               image={video.image}
-              sideVideoClickHandler={props.sideVideoClickHandler}
               channel={video.channel}
               title={video.title}
+              sideVideoClickHandler={props.sideVideoClickHandler}
+
             />
         );
         })}

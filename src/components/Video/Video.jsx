@@ -15,9 +15,6 @@ export default function VideoClip(props) {
         <div className="video__title-wrapper">
           <h1 className="video__title">{ props.title }</h1>
         </div>
-        <div className="video__channel-wrapper">
-          <p className="video__channel">By { props.channel }</p>
-        </div>
       </div>
     </section>
   );

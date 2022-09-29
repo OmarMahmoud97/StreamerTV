@@ -22,13 +22,13 @@ export default function NavBar() {
             <img className="nav__mohan-mobile" src={AvatarImg} alt="img" />
           </div>
         </div>
-        <dv className="nav__btn-wrapper">
+        <div className="nav__btn-wrapper">
           <div className="nav__btn">
             <a href="google.com" className="nav__anchor" >
             <img className="nav__upload" src={UploadImg} alt="Upload link"></img><p className="nav__upload-text">Upload</p> 
             </a>
           </div>
-        </dv>
+        </div>
         <div className="nav__avatar-tablet">
             <img className="nav__mohan-tablet" src={AvatarImg} alt="img" />
           </div>

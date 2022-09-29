@@ -3,8 +3,45 @@
 @use "../../styles/partials/mixin.scss" as *;
 
 .list {
+  @include flex-center;
+  flex-direction: column;
+  justify-content: center;
+
   &__header {
-    padding: 1rem;
     width: 90%;
+    padding: 1rem 0;
+  }
+
+  &__container {
+    width: 90%;
+  }
+  &__wrapper {
+    margin: 1rem;
+    width: 90%;
+  }
+
+  &__image {
+    margin-right: 1rem;
+    width: 6rem;
+    border-radius: 1rem;
+    height: 4rem;
+  }
+
+  &__item {
+    display: flex;
+    height: 4rem;
+    margin-bottom: 1rem;
+  }
+
+  &__title {
+    width: 100%;
+    font-weight: bold;
+    font-size: 0.9rem;
+  }
+
+  &__text {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
   }
 }

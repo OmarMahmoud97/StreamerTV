@@ -12,12 +12,10 @@ export function App() {
   const [currentVideo, setCurrentVideo] = useState(MainProfileVid[0]);
 
   const sideVideoClickHandler = (videoId) => {
-    console.log("hello");
     const updatedVideo = VideoDetails.find((video) => video.id === videoId);
-    console.log(updatedVideo);
+
     setCurrentVideo(updatedVideo);
   };
-
   return (
     <>
       <Navbar />
@@ -27,13 +25,19 @@ export function App() {
         channel={currentVideo.channel}
       />
       <VideoInfo
+        channel={currentVideo.channel}
         views={currentVideo.views}
         timestamp={currentVideo.timestamp}
         likes={currentVideo.likes}
         description={currentVideo.description}
       />
       <CommentsForm />
-      <CommentsList currentVideo={currentVideo} />
+      <CommentsList
+        currentVideo={currentVideo}
+        name={currentVideo.name}
+        timestamp={currentVideo.timestamp}
+        comment={currentVideo.comment}
+      />
       <VideoList
         sideVideoClickHandler={sideVideoClickHandler}
         currentVideoId={currentVideo.id}

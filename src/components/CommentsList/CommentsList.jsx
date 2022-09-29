@@ -6,7 +6,7 @@ import React from 'react'
 export default function CommentsList() {
 
 const formatDate = (timestamp) => {
-  const formatedDate = new Date(timestamp).toDateString("en-",
+  const formatedDate = new Date(Date.now(timestamp)).toLocaleString("en-US",
       {
         day: "2-digit",
         month: "2-digit",
@@ -17,14 +17,13 @@ const formatDate = (timestamp) => {
 
 const comments = VideoDetails[0].comments
 
-  console.log(comments)
   return (
 <ul className="comment" >
       {comments.map(comment => {
         return <div className="comment__item">
 
 
-<article className="comment-article" >
+<article className="comment__article" >
         <div className="comment__wrapper">
           <div className="comment__avatar">
             <div className="comment__avatar-img">

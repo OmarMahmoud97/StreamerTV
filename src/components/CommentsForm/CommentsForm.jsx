@@ -35,7 +35,7 @@ export default function CommentsForm() {
           <p className="form__num"></p>
         </div>
         <div className="form__avatar-wrapper">
-          <div ><img className="form__avatar" src={AvatarImg} alt="image of mohan" /></div>
+          <img className="form__avatar" src={AvatarImg} alt="image of mohan" />
         </div>
         <div className="form__input-wrapper">
           <div className="form__input-box">
