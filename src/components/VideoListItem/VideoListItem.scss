@@ -1,0 +1,9 @@
+@use "../../styles/partials/resets.scss";
+@use "../../styles/partials/variables.scss";
+@use "../../styles/partials/mixin.scss" as *;
+
+.list {
+  &__image {
+    width: 100%;
+  }
+}

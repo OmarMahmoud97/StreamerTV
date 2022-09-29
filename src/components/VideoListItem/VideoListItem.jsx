@@ -7,11 +7,11 @@ export default function VideoItem(props) {
 
     <li className="list__item"
         onClick={() => {
-         props.VideoListItemClickHandler(props.video.id);
+         props.VideoListItemClickHandler(props.image.id);
 
       }}>
       <div className="list__image-wrapper">
-        <img src={props.image} alt={props.title} />
+        <img className="list__image" src={props.image} alt={props.title} />
       </div>
       <div className="list__text">
         <p className="list__title">{props.title}</p>

@@ -23,6 +23,7 @@ export function App() {
         title={currentVideo.title}
         channel={currentVideo.channel}
       />
+
       <CommentsForm />
       <CommentsList currentVideo={currentVideo} />
       <VideoList

@@ -11,16 +11,17 @@ export default function VideoList(props) {
 const filteredVideos = sideDetails.filter(
     (video) => video.id !== props.currentVideoId
   );
-  console.log(filteredVideos)
 return (
   <div className="List">
     <ul className="List__wrapper">
-      {filteredVideos.map((video) => {          
+      {filteredVideos.map((props) => {          
           return (
             <VideoItem
-              key={video.id}
-              video={video.video}
+              key={props.id}
+              image={props.image}
               sideVideoClickHandler={props.VideoListItemClickHandler}
+              channel={props.channel}
+              title={props.title}
             />
         );
         })}

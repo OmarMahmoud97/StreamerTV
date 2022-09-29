@@ -1,5 +1,24 @@
+@use "../../styles/partials/resets.scss";
+@use "../../styles/partials/variables.scss";
+@use "../../styles/partials/mixin.scss" as *;
+
 .video {
   &__video {
     width: 100%;
+    margin-bottom: 1rem;
+  }
+
+  &__channel {
+    margin: 1rem 0;
+  }
+
+  &__title {
+    border-bottom: 1px solid $secondarycolor3;
+    padding-bottom: 1rem;
+  }
+
+  &__channel-wrapper {
+    border-bottom: 1px solid $secondarycolor3;
+    margin-bottom: 1rem;
   }
 }
