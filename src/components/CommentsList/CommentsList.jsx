@@ -19,12 +19,12 @@ const comments = VideoDetails[0].comments
 
   console.log(comments)
   return (
-<ul>
+<ul className="comment" >
       {comments.map(comment => {
-        return <div>
+        return <div className="comment__item">
 
 
-<article className="comment" >
+<article className="comment-article" >
         <div className="comment__wrapper">
           <div className="comment__avatar">
             <div className="comment__avatar-img">

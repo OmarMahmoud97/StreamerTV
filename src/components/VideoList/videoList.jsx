@@ -7,28 +7,30 @@ import VideoItem from "../VideoListItem/VideoListItem"
 
 
 export default function VideoList(props) {
-
 const filteredVideos = sideDetails.filter(
     (video) => video.id !== props.currentVideoId
   );
 return (
   <div className="List">
+    <div className="list__container">
     <div className="list__header">
       <p>NEXT VIDEOS</p>
     </div>
     <ul className="List__wrapper">
-      {filteredVideos.map((props) => {          
+      {filteredVideos.map((video) => {          
           return (
             <VideoItem
-              key={props.id}
-              image={props.image}
+              key={video.id}
+              id={video.id}
+              image={video.image}
               sideVideoClickHandler={props.sideVideoClickHandler}
-              channel={props.channel}
-              title={props.title}
+              channel={video.channel}
+              title={video.title}
             />
         );
         })}
       </ul>
+      </div>
  </div> 
 );
  }

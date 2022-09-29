@@ -7,7 +7,7 @@ export default function VideoItem(props) {
 
     <li className="list__item"
         onClick={() => {
-         props.sideVideoClickHandler(props.key);
+          props.sideVideoClickHandler(props.id);
 
       }}>
       <div className="list__image-wrapper">

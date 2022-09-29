@@ -3,9 +3,24 @@
 @use "../../styles/partials/mixin.scss" as *;
 
 .comment {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  @include media-tablet {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__item {
+    @include media-tablet {
+      width: 90%;
+    }
+  }
+
+  &__article {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
 
   &__wrapper {
     width: 90%;

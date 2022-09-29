@@ -12,7 +12,9 @@ export function App() {
   const [currentVideo, setCurrentVideo] = useState(MainProfileVid[0]);
 
   const sideVideoClickHandler = (videoId) => {
+    console.log("hello");
     const updatedVideo = VideoDetails.find((video) => video.id === videoId);
+    console.log(updatedVideo);
     setCurrentVideo(updatedVideo);
   };
 
