@@ -26,10 +26,10 @@ export default function CommentsForm() {
  
   return(
     <form className="form" onSubmit={handleSubmit}>
-      {/* {comments.map((text) => (
+      {comments.map((text) => (
                     <div>{text}</div>
 
-      ))} */}
+      ))}
       <div className="form__wrapper">
         <div className="form__num-wrapper">
           <p className="form__num"></p>

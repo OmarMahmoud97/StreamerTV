@@ -11,15 +11,4 @@
   &__channel {
     margin: 1rem 0;
   }
-
-  &__title-wrapper {
-    @include flex-center;
-    justify-content: center;
-  }
-
-  &__title {
-    border-bottom: 1px solid $secondarycolor3;
-    padding-bottom: 1rem;
-    width: 90%;
-  }
 }

@@ -6,19 +6,27 @@ import likesImg from "../../assets/icons/likes.svg"
 export default function VideoInfo(props) {
 
 const formatDate = (timestamp) => {
-  const formatedDate = new Date(Date.now(timestamp)).toLocaleString("en-US",
+  const formattedDate = new Date(Date.now(timestamp)).toLocaleString("en-US",
       {
         day: "2-digit",
         month: "2-digit",
         year: "numeric",
       });
-  return formatedDate;
+  return formattedDate;
 };
   
   return (
     <section className="video__details">
-      <div className="video__details-container">
-      <div className="video__wrapper">
+
+          
+                <div className="video__title-container">
+        <div className="video__title-wrapper">
+          <h1 className="video__title">{ props.title }</h1>
+        </div>
+      </div>
+
+            <div className="video__details-container">
+        <div className="video__wrapper">
 
         <div className="video__details-items">
       <div className="video__name-wrapper">
