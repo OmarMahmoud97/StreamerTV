@@ -1,6 +1,6 @@
 import "./videoList.scss";
 import React from "react";
-import sideDetails from "../../Data/video-details.json";
+import sideDetails from "../..//assets/Data/video-details.json";
 import VideoItem from "../VideoListItem/VideoListItem";
 
 export default function VideoList(props) {

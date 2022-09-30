@@ -11,6 +11,9 @@
 
   &__details-container {
     width: 90%;
+    @include media-tablet {
+      width: 100%;
+    }
   }
 
   &__container {
@@ -36,7 +39,6 @@
   &__views,
   &__date,
   &__likes {
-    font-weight: bold;
     color: $primarycolor3;
   }
 
@@ -79,5 +81,8 @@
     @include media-tablet {
       width: 90%;
     }
+  }
+  &__title-container {
+    width: 100%;
   }
 }

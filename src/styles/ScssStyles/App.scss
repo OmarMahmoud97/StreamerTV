@@ -1,0 +1,18 @@
+@use "../partials/mixin" as *;
+@use "../partials/Variables.scss" as *;
+.main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  @include media-desktop {
+    flex-direction: row;
+    width: 63.75rem;
+    margin: 0 auto;
+  }
+
+  &__text-container,
+  &__list-container {
+    width: 90%;
+  }
+}

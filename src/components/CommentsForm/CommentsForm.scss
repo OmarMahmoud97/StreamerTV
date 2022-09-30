@@ -5,9 +5,10 @@
 .form {
   @include flex-center;
   justify-content: center;
+
   &__wrapper {
+    width: 100%;
     display: flex;
-    padding: 0 1rem 0 0;
     justify-content: center;
     @include media-tablet {
       width: 90%;
@@ -16,6 +17,7 @@
   }
 
   &__input-wrapper {
+    width: 100%;
     @include flex-center;
     justify-content: center;
     flex-direction: column;
@@ -32,7 +34,7 @@
   &__input {
     height: 8rem;
     margin-bottom: 1rem;
-    width: 15rem;
+    width: 100%;
     padding: 0.5rem;
     border-radius: 0.5rem;
     @include media-tablet {
@@ -109,9 +111,8 @@
   &__avatar-wrapper {
     display: flex;
     justify-content: center;
-    width: 100%;
+    width: 10%;
     @include media-tablet {
-      width: 10%;
       align-items: center;
     }
   }

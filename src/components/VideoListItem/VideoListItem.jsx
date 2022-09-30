@@ -1,27 +1,20 @@
 import useWindowDimensions from "../../hooks/useWindowDimensions";
-import "./VideoListItem.scss";
 
 export default function VideoListItem(props) {
   const { width } = useWindowDimensions();
 
-  // A variable which we'll set later (trucated or not)
   let videoTitle = "";
 
-  // Truncate the string provided if it's long
   const truncate = (string) => {
     if (string.length > 25) {
       return string.substring(0, 25) + "...";
     }
-
-    // if it's <= 25, just return the string without truncation (delete me)
     return string;
   };
 
-  // If we're on mobile, use the truncate fn
   if (width < 768) {
     videoTitle = truncate(props.title);
   } else {
-    // otherwise, just use the un-truncated title
     videoTitle = props.title;
   }
 

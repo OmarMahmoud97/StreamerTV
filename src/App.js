@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-import VideoDetails from "./Data/video-details.json";
+import VideoDetails from "./assets/Data/video-details.json";
 
 import Navbar from "./components/Header/NavBar";
 import CommentsForm from "./components/CommentsForm/CommentsForm";
@@ -8,6 +8,8 @@ import VideoClip from "./components/Video/Video";
 import CommentsList from "./components/CommentsList/CommentsList";
 import VideoList from "./components/VideoList/videoList";
 import VideoInfo from "./components/VideoInfo/VideoInfo";
+
+import "./styles/ScssStyles/App.scss";
 
 export function App() {
   const [currentVideo, setCurrentVideo] = useState(VideoDetails[0]);
