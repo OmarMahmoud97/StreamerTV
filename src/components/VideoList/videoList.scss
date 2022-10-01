@@ -6,6 +6,13 @@
   @include flex-center;
   flex-direction: column;
   justify-content: center;
+  @include media-tablet {
+    width: 60%;
+    align-items: flex-start;
+  }
+  @include media-desktop {
+    width: 100%;
+  }
 
   &__header {
     width: 90%;
@@ -13,7 +20,7 @@
   }
 
   &__container {
-    width: 90%;
+    width: 100%;
   }
   &__wrapper {
     margin: 1rem;
@@ -31,6 +38,7 @@
     display: flex;
     height: 4rem;
     margin-bottom: 1rem;
+    cursor: pointer;
   }
 
   &__title {

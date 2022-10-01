@@ -11,9 +11,12 @@
     display: flex;
     justify-content: center;
     @include media-tablet {
-      width: 90%;
       padding: 0;
     }
+  }
+
+  &__container {
+    width: 100%;
   }
 
   &__input-wrapper {
@@ -28,20 +31,33 @@
   }
 
   &__input-container {
-    width: 95%;
+    width: 100%;
+    @include media-tablet {
+      margin-right: 1rem;
+    }
+  }
+
+  &__num-wrapper {
+    margin-bottom: 1rem;
   }
 
   &__input {
     height: 8rem;
-    margin-bottom: 1rem;
+    margin: 0.25rem;
     width: 100%;
     padding: 0.5rem;
-    border-radius: 0.5rem;
+    border-radius: 0.25rem;
+    border-color: $secondarycolor3;
+
     @include media-tablet {
       height: 2.25rem;
       width: 100%;
       margin: 0;
     }
+  }
+
+  &__input:focus {
+    outline-color: $primarycolor2;
   }
 
   &__input-box {
@@ -71,6 +87,9 @@
     @include media-tablet {
       width: 25%;
     }
+    @include media-desktop {
+      width: 30%;
+    }
   }
 
   &__btn {
@@ -80,19 +99,27 @@
   }
 
   &__btn-anchor {
+    transition: 0.25s ease-in;
     width: 100%;
     height: 3rem;
+    border-color: transparent;
     @include flex-center;
     justify-content: flex-start;
-    background-color: #0095ff;
-    border-radius: 0.5rem;
+    background-color: $primarycolor2;
+    border-radius: 0.25rem;
     text-decoration: none;
     padding: 1rem;
-    color: #ffffff;
+    color: $primarycolor4;
+    cursor: pointer;
+
     @include media-tablet {
       height: 2rem;
       margin-top: 0.9rem;
     }
+  }
+
+  &__btn-anchor:hover {
+    background-color: $secondarycolor2;
   }
 
   &__btn-text {
@@ -109,9 +136,9 @@
   }
 
   &__avatar-wrapper {
+    margin-right: 1rem;
     display: flex;
     justify-content: center;
-    width: 10%;
     @include media-tablet {
       align-items: center;
     }

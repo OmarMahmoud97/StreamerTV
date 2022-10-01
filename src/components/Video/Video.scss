@@ -3,9 +3,29 @@
 @use "../../styles/partials/mixin.scss" as *;
 
 .video {
+  &__main {
+    margin-bottom: 1rem;
+    @include media-tablet {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: black;
+    }
+  }
+
   &__video {
     width: 100%;
     margin-bottom: 1rem;
+
+    @include media-tablet {
+      width: 90%;
+      max-height: 80vh;
+    }
+
+    @include media-desktop {
+      width: 50rem;
+      margin: 0;
+    }
   }
 
   &__channel {
