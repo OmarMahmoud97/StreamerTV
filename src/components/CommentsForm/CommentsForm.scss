@@ -48,6 +48,7 @@
     padding: 0.5rem;
     border-radius: 0.25rem;
     border-color: $secondarycolor3;
+    background-color: $secondarycolor4;
 
     @include media-tablet {
       height: 2.25rem;
@@ -63,8 +64,7 @@
   &__input-box {
     width: 100%;
     @include media-tablet {
-      display: flex;
-      align-items: center;
+      @include flex-center;
       justify-content: center;
       flex-direction: column;
     }
@@ -73,6 +73,7 @@
   &__label {
     width: 100%;
     color: $primarycolor3;
+    font-weight: 600;
     @include media-tablet {
       width: 40%;
       font-size: 0.8rem;
@@ -116,6 +117,10 @@
       height: 2rem;
       margin-top: 0.9rem;
     }
+  }
+
+  &__num {
+    font-weight: bold;
   }
 
   &__btn-anchor:hover {

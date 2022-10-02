@@ -25,13 +25,17 @@
     border-bottom: 1px solid $secondarycolor3;
     padding: 1rem 0;
     margin-bottom: 1rem;
+    @include media-tablet {
+      justify-content: space-between;
+    }
   }
 
   &__name-wrapper,
   &__views-wrapper,
   &__date-wrapper,
   &__likes-wrapper {
-    display: flex;
+    @include flex-center;
+    justify-content: flex-start;
     flex-direction: row;
   }
 
@@ -48,12 +52,20 @@
   }
 
   &__details-items {
-    width: 50%;
-
+    width: 40%;
     height: 10vh;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
+    @include media-tablet {
+      flex-direction: row;
+      justify-content: space-between;
+      height: 0;
+      padding: 1rem 0;
+    }
+    &--right {
+      margin-left: 5rem;
+    }
   }
 
   &__description {

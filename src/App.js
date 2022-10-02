@@ -35,7 +35,7 @@ export function App() {
             likes={currentVideo.likes}
             description={currentVideo.description}
           />
-          <CommentsForm />
+          <CommentsForm comment={currentVideo.comments} />
 
           <CommentsList
             key={currentVideo.id}

@@ -6,8 +6,7 @@
   &__main {
     margin-bottom: 1rem;
     @include media-tablet {
-      display: flex;
-      align-items: center;
+      @include flex-center;
       justify-content: center;
       background: black;
     }
@@ -20,11 +19,11 @@
     @include media-tablet {
       width: 90%;
       max-height: 80vh;
+      margin: 0;
     }
 
     @include media-desktop {
       width: 50rem;
-      margin: 0;
     }
   }
 

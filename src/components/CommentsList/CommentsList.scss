@@ -19,6 +19,9 @@
   &__article {
     @include flex-center;
     justify-content: center;
+    @include media-tablet {
+      width: 100%;
+    }
   }
 
   &__wrapper {
@@ -47,5 +50,9 @@
     border-radius: 100%;
     background-color: $primarycolor3;
     margin-right: 0.5rem;
+  }
+  &__container,
+  &__data {
+    width: 100%;
   }
 }

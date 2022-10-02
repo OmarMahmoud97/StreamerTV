@@ -10,10 +10,10 @@ export default function VideoList(props) {
   return (
     <div className="list">
       <div className="list__container">
-        <div className="list__header">
-          <p>NEXT VIDEOS</p>
+        <div className="list__header-wrapper">
+          <p className="list__header">NEXT VIDEOS</p>
         </div>
-        <ul className="List__wrapper">
+        <ul className="list__wrapper">
           {filteredVideos.map((video) => {
             return (
               <VideoItem

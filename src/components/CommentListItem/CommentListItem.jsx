@@ -1,5 +1,4 @@
 import { formatDate } from "../../helpers/date";
-import "./CommentListItem.scss";
 
 export default function CommentsListItem({ comment }) {
   return (

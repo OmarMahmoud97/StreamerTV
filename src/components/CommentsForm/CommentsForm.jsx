@@ -4,7 +4,7 @@ import AvatarImg from "../../assets/images/Mohan-muruge.jpg";
 
 import { useState } from "react";
 
-export default function CommentsForm() {
+export default function CommentsForm(props) {
   const [comment, setComment] = useState("");
   const [comments, setComments] = useState([]);
 
@@ -27,7 +27,7 @@ export default function CommentsForm() {
       ))}
       <div className="form__container">
         <div className="form__num-wrapper">
-          <p className="form__num"> 3 Comments</p>
+          <p className="form__num">{props.comment.length} comments</p>
         </div>
         <div className="form__wrapper">
           <div className="form__avatar-wrapper">

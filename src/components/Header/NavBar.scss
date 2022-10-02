@@ -3,8 +3,7 @@
 @use "../../styles/partials/mixin.scss" as *;
 
 .nav {
-  display: flex;
-  align-items: center;
+  @include flex-center;
   justify-content: center;
 
   @include media-desktop {
@@ -21,6 +20,7 @@
 
     @include media-desktop {
       width: 63.75rem;
+      justify-content: space-between;
     }
   }
 
@@ -75,8 +75,8 @@
   }
 
   &__mohan-tablet {
-    width: 2.25rem;
-    height: 2.25rem;
+    width: 3rem;
+    height: 3rem;
     border-radius: 100%;
     object-fit: cover;
   }
@@ -95,6 +95,7 @@
     justify-content: center;
     @include media-tablet {
       width: 100%;
+      justify-content: flex-end;
     }
   }
 
@@ -102,14 +103,18 @@
     width: 100%;
     background: url(../../assets/icons/search.svg);
     background-repeat: no-repeat;
-    background-position: 5px;
-    padding: 0.5rem 2rem;
+    background-position: 1rem;
+    padding: 0.5rem 2.5rem;
     margin-right: 1rem;
     border-radius: 0.25rem;
     border-color: $secondarycolor3;
 
     @include media-tablet {
       height: 3rem;
+      width: 80%;
+    }
+    @include media-desktop {
+      width: 100%;
     }
   }
   &__input:focus {
@@ -149,7 +154,7 @@
     color: $primarycolor4;
     cursor: pointer;
 
-    @include media-desktop {
+    @include media-tablet {
       margin-right: 1rem;
     }
   }

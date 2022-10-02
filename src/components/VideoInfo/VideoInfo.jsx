@@ -2,20 +2,9 @@ import React from "react";
 import "./VideoInfo.scss";
 import viewsImg from "../../assets/icons/views.svg";
 import likesImg from "../../assets/icons/likes.svg";
+import { formatDate } from "../../helpers/date";
 
 export default function VideoInfo(props) {
-  const formatDate = (timestamp) => {
-    const formattedDate = new Date(Date.now(timestamp)).toLocaleString(
-      "en-US",
-      {
-        day: "2-digit",
-        month: "2-digit",
-        year: "numeric",
-      }
-    );
-    return formattedDate;
-  };
-
   return (
     <section className="video__details">
       <div className="video__title-container">
@@ -34,7 +23,7 @@ export default function VideoInfo(props) {
               <p className="video__date">{formatDate(props.timestamp)}</p>
             </div>
           </div>
-          <div className="video__details-items">
+          <div className="video__details-items video__details-items--right">
             <div className="video__views-wrapper">
               <img src={viewsImg} alt="views icon" className="videos__icon" />
               <p className="video__views">{props.views}</p>
