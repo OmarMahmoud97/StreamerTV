@@ -1,57 +1,22 @@
-import { useState } from "react";
+import "./styles/partials/Resets.scss";
+import { BrowserRouter, Route, Routes, Navigate } from "react-router-dom";
+import React from "react";
+import HomePage from "./pages/HomePage";
+import UploadPage from "./pages/UploadPage";
+import NavBar from "./components/Header/NavBar";
 
-import VideoDetails from "./assets/Data/video-details.json";
-
-import Navbar from "./components/Header/NavBar";
-import CommentsForm from "./components/CommentsForm/CommentsForm";
-import VideoClip from "./components/Video/Video";
-import CommentsList from "./components/CommentsList/CommentsList";
-import VideoList from "./components/VideoList/videoList";
-import VideoInfo from "./components/VideoInfo/VideoInfo";
-
-import "./styles/ScssStyles/App.scss";
-
-export function App() {
-  const [currentVideo, setCurrentVideo] = useState(VideoDetails[0]);
-
-  const sideVideoClickHandler = (videoId) => {
-    const updatedVideo = VideoDetails.find((video) => video.id === videoId);
-
-    setCurrentVideo(updatedVideo);
-  };
-
+export default function App() {
   return (
-    <>
-      <Navbar />
-      <VideoClip mainProfileVid={currentVideo.image} />
-
-      <div className="main">
-        <div className="main__text-container ">
-          <VideoInfo
-            title={currentVideo.title}
-            channel={currentVideo.channel}
-            views={currentVideo.views}
-            timestamp={currentVideo.timestamp}
-            likes={currentVideo.likes}
-            description={currentVideo.description}
-          />
-          <CommentsForm comment={currentVideo.comments} />
-
-          <CommentsList
-            key={currentVideo.id}
-            currentVideo={currentVideo}
-            name={currentVideo.name}
-            timestamp={currentVideo.timestamp}
-            comment={currentVideo.comment}
-          />
-        </div>
-        <div className="main__list-container">
-          <VideoList
-            sideVideoClickHandler={sideVideoClickHandler}
-            currentVideoId={currentVideo.id}
-          />
-        </div>
+    <BrowserRouter>
+      <NavBar />
+      <div className="app__container">
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+          <Route path="/home" element={<Navigate to="/" />} />
+          <Route path="/videos/:videoId" />
+          <Route path="/upload" element={<UploadPage />} />
+        </Routes>
       </div>
-    </>
+    </BrowserRouter>
   );
 }

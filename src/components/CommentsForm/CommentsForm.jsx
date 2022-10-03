@@ -31,11 +31,7 @@ export default function CommentsForm(props) {
         </div>
         <div className="form__wrapper">
           <div className="form__avatar-wrapper">
-            <img
-              className="form__avatar"
-              src={AvatarImg}
-              alt="image of mohan"
-            />
+            <img className="form__avatar" src={AvatarImg} alt="mohan" />
           </div>
           <div className="form__input-wrapper">
             <div className="form__input-box">
