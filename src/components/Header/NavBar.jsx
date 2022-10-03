@@ -1,8 +1,7 @@
 import "./NavBar.scss";
-import AvatarImg from '../../assets/images/Mohan-muruge.jpg';
-import UploadImg from '../../assets/icons/upload.svg';
-import NavLogo from '../../assets/logo/BrainFlix-logo.svg';
-
+import AvatarImg from "../../assets/images/Mohan-muruge.jpg";
+import UploadImg from "../../assets/icons/upload.svg";
+import NavLogo from "../../assets/logo/BrainFlix-logo.svg";
 
 export default function NavBar() {
   return (
@@ -14,26 +13,37 @@ export default function NavBar() {
           </div>
         </div>
         <div className="nav__content-wrapper">
-        <div className="nav__search-wrapper">
-          <div className="nav__search">
-            <input className="nav__input" type="text" name="input" id="search" placeholder="Search" />
+          <div className="nav__search-wrapper">
+            <div className="nav__search">
+              <input
+                className="nav__input"
+                type="text"
+                name="input"
+                id="search"
+                placeholder="Search"
+              />
+            </div>
+            <div className="nav__avatar-mobile">
+              <img className="nav__mohan-mobile" src={AvatarImg} alt="img" />
+            </div>
           </div>
-          <div className="nav__avatar-mobile">
-            <img className="nav__mohan-mobile" src={AvatarImg} alt="img" />
+          <div className="nav__btn-wrapper">
+            <div className="nav__btn">
+              <a href={"/upload"} className="nav__anchor">
+                <img
+                  className="nav__upload"
+                  src={UploadImg}
+                  alt="Upload link"
+                ></img>
+                <p className="nav__upload-text">Upload</p>
+              </a>
+            </div>
           </div>
-        </div>
-        <div className="nav__btn-wrapper">
-          <div className="nav__btn">
-            <a href="google.com" className="nav__anchor" >
-            <img className="nav__upload" src={UploadImg} alt="Upload link"></img><p className="nav__upload-text">Upload</p> 
-            </a>
-          </div>
-        </div>
-        <div className="nav__avatar-tablet">
+          <div className="nav__avatar-tablet">
             <img className="nav__mohan-tablet" src={AvatarImg} alt="img" />
           </div>
         </div>
-        </div>
+      </div>
     </nav>
   );
 }
