@@ -39,8 +39,11 @@ export default function VideoInfo() {
           </div>
         </div>
         <div className="upload__footer">
-          <Link className="upload__button-label" to="/">
-            <h4 className="upload__cancel">CANCEL</h4>
+          <Link
+            className="upload__button-label upload__button-label--mobile"
+            to="/"
+          >
+            <h4 className="upload__cancel upload__cancel--mobile">CANCEL</h4>
           </Link>
           <Link
             className="upload__button-label upload__button-label--publish"
@@ -54,6 +57,9 @@ export default function VideoInfo() {
               />
               <h4 className="upload__publish">PUBLISH</h4>
             </button>
+          </Link>
+          <Link className="upload__button-label " to="/">
+            <h4 className="upload__cancel ">CANCEL</h4>
           </Link>
         </div>
       </section>

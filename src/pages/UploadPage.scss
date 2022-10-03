@@ -44,7 +44,7 @@
     width: 100%;
     border-radius: 0.25rem;
     @include media-desktop {
-      max-height: 10.35rem;
+      width: 95%;
     }
   }
   &__form-container {
@@ -55,15 +55,15 @@
     justify-content: flex-start;
     background-color: #fafafa;
     border-color: #e1e1e1;
-    min-height: 2.25rem;
-    min-width: 15rem;
+    height: 2.25rem;
+    width: 15rem;
     border-radius: 0.25rem;
     border-width: 0.063rem;
     padding: 0.75rem;
     width: 100%;
     @include media-tablet {
       height: 100%;
-      min-height: 2.5rem;
+      height: 2.5rem;
       padding: 1rem;
     }
   }
@@ -123,6 +123,7 @@
     border-width: 0;
     font-size: 1rem;
     text-decoration: none;
+    margin-bottom: 1rem;
     @include media-tablet {
       width: 9rem;
       margin-left: 4rem;
@@ -143,7 +144,15 @@
     }
   }
   &__cancel {
+    display: contents;
     color: #0095ff;
+
+    &--mobile {
+      display: none;
+      @include media-tablet {
+        display: contents;
+      }
+    }
   }
 
   &__publish {
