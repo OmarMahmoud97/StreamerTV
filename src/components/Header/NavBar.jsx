@@ -2,6 +2,7 @@ import "./NavBar.scss";
 import AvatarImg from "../../assets/images/Mohan-muruge.jpg";
 import UploadImg from "../../assets/icons/upload.svg";
 import NavLogo from "../../assets/logo/BrainFlix-logo.svg";
+import { Link } from "react-router-dom";
 
 export default function NavBar() {
   return (
@@ -29,14 +30,16 @@ export default function NavBar() {
           </div>
           <div className="nav__btn-wrapper">
             <div className="nav__btn">
-              <a href={"/upload"} className="nav__anchor">
-                <img
-                  className="nav__upload"
-                  src={UploadImg}
-                  alt="Upload link"
-                ></img>
-                <p className="nav__upload-text">Upload</p>
-              </a>
+              <Link to="/upload" className="nav__link">
+                <button className="nav__anchor">
+                  <img
+                    className="nav__upload"
+                    src={UploadImg}
+                    alt="Upload link"
+                  ></img>
+                  <p className="nav__upload-text">Upload</p>
+                </button>
+              </Link>
             </div>
           </div>
           <div className="nav__avatar-tablet">

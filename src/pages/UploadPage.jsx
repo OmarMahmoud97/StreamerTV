@@ -9,32 +9,37 @@ export default function VideoInfo() {
       <section className="upload">
         <h1 className="upload__header"> Upload Video</h1>
         <div className="upload__content">
-          <div className="upload__thumbnail">
-            <h2 className="upload__subheader">VIDEO THUMBNAIL</h2>
-            <div className="upload__image-container">
-              <img
-                src={bikeImg}
-                className="upload__image"
-                alt="upload-thumbnail"
-              />
+          <div className="upload__img-wrapper">
+            <div className="upload__thumbnail">
+              <h2 className="upload__subheader">VIDEO THUMBNAIL</h2>
+              <div className="upload__image-container">
+                <img
+                  src={bikeImg}
+                  className="upload__image"
+                  alt="upload-thumbnail"
+                />
+              </div>
             </div>
           </div>
-          <div className="upload__details">
-            <h2 className="upload__subheader">TITLE YOUR VIDEO</h2>
-            <div className="upload__form-container">
-              <input
-                type="text"
-                className="upload__form-input"
-                placeholder="Add a title to your video"
-              />
-            </div>
-            <h2 className="upload__subheader">ADD A VIDEO DESCRIPTION</h2>
-            <div className="upload__form-container">
-              <input
-                type="text"
-                className="upload__description"
-                placeholder="Add a description to your video"
-              />
+
+          <div className="upload__form-wrapper">
+            <div className="upload__details">
+              <h2 className="upload__subheader">TITLE YOUR VIDEO</h2>
+              <div className="upload__form-container">
+                <input
+                  type="text"
+                  className="upload__form-input"
+                  placeholder="Add a title to your video"
+                />
+              </div>
+              <h2 className="upload__subheader">ADD A VIDEO DESCRIPTION</h2>
+              <div className="upload__form-container">
+                <input
+                  type="text"
+                  className="upload__description"
+                  placeholder="Add a description to your video"
+                />
+              </div>
             </div>
           </div>
         </div>
@@ -43,7 +48,7 @@ export default function VideoInfo() {
             className="upload__button-label upload__button-label--mobile"
             to="/"
           >
-            <h4 className="upload__cancel upload__cancel--mobile">CANCEL</h4>
+            <h4 className="upload__cancel-left">CANCEL</h4>
           </Link>
           <Link
             className="upload__button-label upload__button-label--publish"
@@ -59,7 +64,7 @@ export default function VideoInfo() {
             </button>
           </Link>
           <Link className="upload__button-label " to="/">
-            <h4 className="upload__cancel ">CANCEL</h4>
+            <h4 className="upload__cancel-right ">CANCEL</h4>
           </Link>
         </div>
       </section>
