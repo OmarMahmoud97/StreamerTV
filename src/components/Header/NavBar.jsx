@@ -8,11 +8,13 @@ export default function NavBar() {
   return (
     <nav className="nav">
       <div className="nav__wrapper">
-        <div className="nav__logo-wrapper">
-          <div className="nav__logo">
-            <img src={NavLogo} alt="logo" className="nav__logo-img" />
+        <Link to="/" className="nav__link-logo">
+          <div className="nav__logo-wrapper">
+            <div className="nav__logo">
+              <img src={NavLogo} alt="logo" className="nav__logo-img" />
+            </div>
           </div>
-        </div>
+        </Link>
         <div className="nav__content-wrapper">
           <div className="nav__search-wrapper">
             <div className="nav__search">
