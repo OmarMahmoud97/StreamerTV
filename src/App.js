@@ -13,7 +13,7 @@ export default function App() {
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/home" element={<Navigate to="/" />} />
-          <Route path="/videos/:videoId" />
+          <Route path="/videos/:videoId" element={<HomePage />} />
           <Route path="/upload" element={<UploadPage />} />
         </Routes>
       </div>

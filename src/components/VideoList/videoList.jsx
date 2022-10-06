@@ -22,7 +22,7 @@ export default function VideoList(props) {
                 image={video.image}
                 channel={video.channel}
                 title={video.title}
-                sideVideoClickHandler={props.sideVideoClickHandler}
+                // sideVideoClickHandler={props.sideVideoClickHandler}
               />
             );
           })}
