@@ -3,12 +3,12 @@ import { BrowserRouter, Route, Routes, Navigate } from "react-router-dom";
 import React from "react";
 import HomePage from "./pages/HomePage";
 import UploadPage from "./pages/UploadPage";
-import NavBar from "./components/Header/NavBar";
+import Header from "./components/Header/Header";
 
 export default function App() {
   return (
     <BrowserRouter>
-      <NavBar />
+      <Header />
       <div className="app__container">
         <Routes>
           <Route path="/" element={<HomePage />} />

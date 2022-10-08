@@ -1,6 +1,6 @@
-import "./videoList.scss";
+import "./VideoList.scss";
 import React from "react";
-import sideDetails from "../..//assets/Data/video-details.json";
+import sideDetails from "../../assets/Data/video-details.json";
 import VideoItem from "../VideoListItem/VideoListItem";
 
 export default function VideoList(props) {
@@ -22,7 +22,6 @@ export default function VideoList(props) {
                 image={video.image}
                 channel={video.channel}
                 title={video.title}
-                // sideVideoClickHandler={props.sideVideoClickHandler}
               />
             );
           })}

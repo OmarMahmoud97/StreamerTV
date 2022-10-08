@@ -1,10 +1,10 @@
-import "./NavBar.scss";
+import "./Header.scss";
 import AvatarImg from "../../assets/images/Mohan-muruge.jpg";
 import UploadImg from "../../assets/icons/upload.svg";
 import NavLogo from "../../assets/logo/BrainFlix-logo.svg";
 import { Link } from "react-router-dom";
 
-export default function NavBar() {
+export default function Header() {
   return (
     <nav className="nav">
       <div className="nav__wrapper">

@@ -2,11 +2,10 @@ import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import axios from "axios";
 
-// import VideoDetails from "../assets/Data/video-details.json";
 import CommentsForm from "../components/CommentsForm/CommentsForm";
 import VideoClip from "../components/Video/Video";
 import CommentsList from "../components/CommentsList/CommentsList";
-import VideoList from "../components/VideoList/videoList";
+import VideoList from "../components/VideoList/VideoList";
 import VideoInfo from "../components/VideoInfo/VideoInfo";
 
 import { API_KEY, API_URL } from "../utils/UtilsApi";
@@ -14,6 +13,7 @@ import "../styles/ScssStyles/HomePage.scss";
 
 export default function HomePage() {
   const { videoId } = useParams();
+  console.log({ videoId });
 
   const [videoList, setVideoList] = useState([]);
   const [selectedVideo, setSelectedVideo] = useState(null);

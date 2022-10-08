@@ -14,6 +14,9 @@
     @include media-tablet {
       width: 100%;
     }
+    @include media-desktop {
+      padding-right: 1rem;
+    }
   }
 
   &__container {
@@ -47,6 +50,11 @@
   &__name {
     font-weight: bold;
     color: $primarycolor;
+    width: 9rem;
+  }
+
+  &__name-wrapper {
+    width: 9rem;
   }
 
   &__details-items {

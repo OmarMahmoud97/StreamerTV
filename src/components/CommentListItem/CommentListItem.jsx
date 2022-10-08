@@ -2,8 +2,8 @@ import { formatDate } from "../../helpers/date";
 
 export default function CommentsListItem({ comment }) {
   return (
-    <article className="comment__article">
-      <div className="comment__wrapper">
+    <article className="comment__article ">
+      <div className="comment__wrapper comment__wrapper--first">
         <div className="comment__avatar">
           <div className="comment__avatar-img"></div>
         </div>

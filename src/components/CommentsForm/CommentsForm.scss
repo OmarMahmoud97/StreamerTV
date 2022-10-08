@@ -13,6 +13,9 @@
     @include media-tablet {
       padding: 0;
     }
+    @include media-desktop {
+      padding-right: 1rem;
+    }
   }
 
   &__container {
@@ -130,7 +133,6 @@
   &__btn-text {
     width: 100%;
     text-align: center;
-    font-weight: bold;
   }
 
   &__avatar {
