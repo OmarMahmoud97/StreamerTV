@@ -29,6 +29,9 @@
     padding: 1rem 0;
     margin-bottom: 1rem;
     justify-content: space-between;
+    @include media-tablet {
+      padding-right: 1rem;
+    }
   }
 
   &__name-wrapper,

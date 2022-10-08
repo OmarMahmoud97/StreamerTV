@@ -7,9 +7,10 @@ import VideoClip from "../components/Video/Video";
 import CommentsList from "../components/CommentsList/CommentsList";
 import VideoList from "../components/VideoList/VideoList";
 import VideoInfo from "../components/VideoInfo/VideoInfo";
+import LoadingSpinner from "../assets/icons/Spinner-1s-200px.gif";
 
 import { API_KEY, API_URL } from "../utils/UtilsApi";
-import "../styles/ScssStyles/HomePage.scss";
+import "./HomePage.scss";
 
 export default function HomePage() {
   const { videoId } = useParams();
@@ -39,7 +40,7 @@ export default function HomePage() {
   }, [currentVideoId]);
 
   if (!selectedVideo) {
-    return <h1>Page Loading...</h1>;
+    return <img src={LoadingSpinner} alt="Page Loading..." />;
   }
 
   return (
