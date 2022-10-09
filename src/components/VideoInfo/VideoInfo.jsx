@@ -1,10 +1,10 @@
 import React from "react";
 import moment from "moment";
 
-import "./VideoInfo.scss";
 import viewsImg from "../../assets/icons/views.svg";
 import likesImg from "../../assets/icons/likes.svg";
 
+import "./VideoInfo.scss";
 export default function VideoInfo(props) {
   const formattedDate = moment(props.timestamp).startOf("minutes").fromNow();
 
