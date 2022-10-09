@@ -1,10 +1,13 @@
 import React from "react";
+import moment from "moment";
+
 import "./VideoInfo.scss";
 import viewsImg from "../../assets/icons/views.svg";
 import likesImg from "../../assets/icons/likes.svg";
-import { formatDate } from "../../helpers/date";
 
 export default function VideoInfo(props) {
+  const formattedDate = moment(props.timestamp).startOf("minutes").fromNow();
+
   return (
     <section className="video__details">
       <div className="video__title-container">
@@ -20,7 +23,7 @@ export default function VideoInfo(props) {
               <p className="video__name">By {props.channel}</p>
             </div>
             <div className="video__date-wrapper">
-              <p className="video__date">{formatDate(props.timestamp)}</p>
+              <p className="video__date">{formattedDate}</p>
             </div>
           </div>
           <div className="video__details-items video__details-items--right">

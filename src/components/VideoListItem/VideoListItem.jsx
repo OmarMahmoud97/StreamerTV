@@ -1,4 +1,7 @@
+import { Link } from "react-router-dom";
 import useWindowDimensions from "../../hooks/useWindowDimensions";
+
+import "./VideoListItem.scss";
 
 export default function VideoListItem(props) {
   const { width } = useWindowDimensions();
@@ -19,19 +22,16 @@ export default function VideoListItem(props) {
   }
 
   return (
-    <li
-      className="list__item"
-      onClick={() => {
-        props.sideVideoClickHandler(props.id);
-      }}
-    >
-      <div className="list__image-wrapper">
-        <img className="list__image" src={props.image} alt={props.title} />
-      </div>
-      <div className="list__text">
-        <p className="list__title">{videoTitle}</p>
-        <p className="list__name">{props.channel}</p>
-      </div>
-    </li>
+    <Link className="list__link" to={`/videos/${props.id}`}>
+      <li className="list__item">
+        <div className="list__image-wrapper">
+          <img className="list__image" src={props.image} alt={props.title} />
+        </div>
+        <div className="list__text">
+          <p className="list__title">{videoTitle}</p>
+          <p className="list__name">{props.channel}</p>
+        </div>
+      </li>
+    </Link>
   );
 }

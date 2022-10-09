@@ -5,6 +5,7 @@
 .video {
   &__main {
     margin-bottom: 1rem;
+
     @include media-tablet {
       @include flex-center;
       justify-content: center;
@@ -17,13 +18,7 @@
     margin-bottom: 1rem;
 
     @include media-tablet {
-      width: 90%;
-      max-height: 80vh;
-      margin: 0;
-    }
-
-    @include media-desktop {
-      width: 50rem;
+      height: 45rem;
     }
   }
 
