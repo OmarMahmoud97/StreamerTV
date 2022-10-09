@@ -6,10 +6,12 @@
   @include flex-center;
   flex-direction: column;
   justify-content: center;
+
   @include media-tablet {
     width: 60%;
     align-items: flex-start;
   }
+
   @include media-desktop {
     width: 100%;
   }
@@ -18,15 +20,19 @@
     width: 90%;
     padding: 1rem 0;
   }
+
   &__header {
     color: $primarycolor3;
     font-weight: 600;
   }
+
   &__container {
     width: 100%;
   }
+
   &__wrapper {
     width: 90%;
+
     @include media-desktop {
       display: flex;
       flex-direction: column;

@@ -5,6 +5,7 @@
 .video {
   &__main {
     margin-bottom: 1rem;
+
     @include media-tablet {
       @include flex-center;
       justify-content: center;

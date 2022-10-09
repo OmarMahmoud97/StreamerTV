@@ -5,6 +5,7 @@
   @include flex-center;
   justify-content: center;
   flex-direction: column;
+
   @include media-desktop {
     flex-direction: row;
     width: 63.75rem;
@@ -14,6 +15,7 @@
   &__text-container,
   &__list-container {
     width: 90%;
+
     @include media-desktop {
       height: 100vh;
     }

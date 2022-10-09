@@ -11,6 +11,7 @@
   }
   &__header {
     padding: 1.5rem 0 1.5rem 0;
+
     @include media-tablet {
       padding: 1.5rem 0 1.5rem 0;
       border-bottom: 1px solid grey;
@@ -40,16 +41,20 @@
   &__details {
     width: 100%;
   }
+
   &__image-container {
     padding-bottom: 1rem;
   }
+
   &__image {
     width: 100%;
     border-radius: 0.25rem;
+
     @include media-desktop {
       width: 95%;
     }
   }
+
   &__form-container {
     padding-bottom: 1.5rem;
   }
@@ -64,12 +69,14 @@
     border-width: 0.063rem;
     padding: 0.75rem;
     width: 100%;
+
     @include media-tablet {
       height: 100%;
       height: 2.5rem;
       padding: 1rem;
     }
   }
+
   &__title {
     height: 2.5rem;
     width: 100%;
@@ -79,6 +86,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+
     @include media-tablet {
       flex-direction: row;
       justify-content: flex-end;
@@ -92,6 +100,7 @@
     line-height: 1.4rem;
     font-weight: 600;
   }
+
   &__description,
   &__form-input {
     height: 2.5rem;
@@ -104,13 +113,16 @@
     border-color: #e1e1e1;
     border-radius: 0.25rem;
   }
+
   &__description {
     width: 100%;
     height: 5rem;
+
     @include media-tablet {
       padding-bottom: 3rem;
     }
   }
+
   &__button {
     display: flex;
     justify-content: flex-start;
@@ -125,6 +137,7 @@
     font-size: 1rem;
     text-decoration: none;
     margin-bottom: 1rem;
+
     @include media-tablet {
       width: 9rem;
       margin-left: 4rem;
@@ -137,6 +150,7 @@
     &--publish {
       width: 100%;
       text-align: center;
+
       @include media-tablet {
         width: 0;
       }
@@ -144,6 +158,7 @@
   }
   &__button-icon {
     position: absolute;
+
     @include media-tablet {
       padding-right: 1rem;
     }
@@ -156,6 +171,7 @@
   &__cancel-right {
     display: contents;
     color: #0095ff;
+
     @include media-tablet {
       display: none;
     }
@@ -163,16 +179,19 @@
     &__cancel-left {
       color: #0095ff;
       display: none;
+
       @include media-tablet {
         display: contents;
       }
     }
   }
+
   &__img-wrapper {
     @include media-desktop {
       width: 30rem;
     }
   }
+
   &__form-wrapper {
     @include media-desktop {
       width: 100%;
