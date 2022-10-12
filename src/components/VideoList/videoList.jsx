@@ -1,10 +1,20 @@
 import "./VideoList.scss";
 import React from "react";
-import sideDetails from "../../assets/Data/video-details.json";
 import VideoItem from "../VideoListItem/VideoListItem";
+import { useEffect, useState } from "react";
+import axios from "axios";
+import { API_URL } from "../../utils/UtilsApi";
 
 export default function VideoList(props) {
-  const filteredVideos = sideDetails.filter(
+  const [videoList, setVideoList] = useState([]);
+
+  useEffect(() => {
+    axios.get(`${API_URL}videos/`).then((response) => {
+      setVideoList(response.data);
+    });
+  }, []);
+
+  const filteredVideos = videoList.filter(
     (video) => video.id !== props.currentVideoId
   );
   return (

@@ -9,19 +9,17 @@ import VideoList from "../components/VideoList/VideoList";
 import VideoInfo from "../components/VideoInfo/VideoInfo";
 import LoadingSpinner from "../assets/icons/Spinner-1s-200px.gif";
 
-import { API_KEY, API_URL } from "../utils/UtilsApi";
+import { API_URL } from "../utils/UtilsApi";
 import "./HomePage.scss";
 
 export default function HomePage() {
   const { videoId } = useParams();
-  console.log({ videoId });
 
   const [videoList, setVideoList] = useState([]);
   const [selectedVideo, setSelectedVideo] = useState(null);
   useEffect(() => {
-    axios.get(`${API_URL}/videos/${API_KEY}`).then((response) => {
+    axios.get(`${API_URL}videos/`).then((response) => {
       setVideoList(response.data);
-      console.log(response.data);
     });
   }, []);
 
@@ -29,13 +27,9 @@ export default function HomePage() {
 
   useEffect(() => {
     if (currentVideoId) {
-      axios
-        .get(`${API_URL}/videos/${currentVideoId}/${API_KEY}`)
-        .then((response) => {
-          setSelectedVideo(response.data);
-
-          console.log(response.data);
-        });
+      axios.get(`${API_URL}videos/${currentVideoId}`).then((response) => {
+        setSelectedVideo(response.data);
+      });
     }
   }, [currentVideoId]);
 
