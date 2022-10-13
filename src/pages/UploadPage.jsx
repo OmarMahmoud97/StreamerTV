@@ -21,10 +21,33 @@ export default function VideoInfo() {
       likes: "7",
       duration: "8:00",
       description: description,
-      image: "Upload-video-preview.jpg",
+      image: { bikeImg },
       timestamp: Date.now(),
       video: "https://project-2-api.herokuapp.com/stream",
-      comments: [],
+      comments: [
+        {
+          id: "c93c16f0-4795-45d1-b0da-21696d54f25a",
+          name: "Mike tyson",
+          comment: "I like unicorns",
+          likes: 6,
+          timestamp: 1665653242222,
+        },
+        {
+          id: "99938bd4-67f9-4404-ad3e-b23a6ad05717",
+          name: "Ariana Grande",
+          comment: "Shutup Mike",
+          likes: 1,
+          timestamp: 1665653242422,
+        },
+        {
+          id: "fc2e9a8c-7daa-4e14-980d-5467ca2054ec",
+          name: "Tupac",
+          comment:
+            "From five-star hotels to the cheapest spots – wherever you like to stay, THIS is the way to do it! I’ll take sunlight and a cozy reading corner over a pool any day of the week.",
+          likes: 4,
+          timestamp: 1665653242222,
+        },
+      ],
     };
 
     axios.post(`${API_URL}videos/`, newVideo);
