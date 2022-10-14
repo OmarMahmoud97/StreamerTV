@@ -21,7 +21,7 @@ export default function VideoInfo() {
       likes: "7",
       duration: "8:00",
       description: description,
-      image: { bikeImg },
+      image: "http://localhost:8080/images/Upload-video-preview.jpg",
       timestamp: Date.now(),
       video: "https://project-2-api.herokuapp.com/stream",
       comments: [
