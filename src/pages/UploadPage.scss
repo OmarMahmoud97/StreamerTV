@@ -175,14 +175,14 @@
     @include media-tablet {
       display: none;
     }
+  }
 
-    &__cancel-left {
-      color: #0095ff;
-      display: none;
+  &__cancel-left {
+    color: #0095ff;
+    display: none;
 
-      @include media-tablet {
-        display: contents;
-      }
+    @include media-tablet {
+      display: contents;
     }
   }
 
