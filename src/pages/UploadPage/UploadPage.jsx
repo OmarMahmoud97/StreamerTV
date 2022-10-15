@@ -1,8 +1,8 @@
-import { API_URL } from "../utils/UtilsApi";
+import { API_URL } from "../../utils/UtilsApi";
 import { Link } from "react-router-dom";
 import "./UploadPage.scss";
-import uploadIcon from "../assets/icons/publish.svg";
-import bikeImg from "../assets/images/Upload-video-preview.jpg";
+import uploadIcon from "../../assets/icons/publish.svg";
+import bikeImg from "../../assets/images/Upload-video-preview.jpg";
 import { useState } from "react";
 import axios from "axios";
 const { v4: uuid } = require("uuid");

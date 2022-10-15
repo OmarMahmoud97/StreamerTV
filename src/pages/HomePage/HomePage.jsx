@@ -2,14 +2,14 @@ import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import axios from "axios";
 
-import CommentsForm from "../components/CommentsForm/CommentsForm";
-import VideoClip from "../components/Video/Video";
-import CommentsList from "../components/CommentsList/CommentsList";
-import VideoList from "../components/VideoList/VideoList";
-import VideoInfo from "../components/VideoInfo/VideoInfo";
-import LoadingSpinner from "../assets/icons/Spinner-1s-200px.gif";
+import CommentsForm from "../../components/CommentsForm/CommentsForm";
+import VideoClip from "../../components/Video/Video";
+import CommentsList from "../../components/CommentsList/CommentsList";
+import VideoList from "../../components/VideoList/VideoList";
+import VideoInfo from "../../components/VideoInfo/VideoInfo";
+import LoadingSpinner from "../../assets/icons/Spinner-1s-200px.gif";
 
-import { API_URL } from "../utils/UtilsApi";
+import { API_URL } from "../../utils/UtilsApi";
 import "./HomePage.scss";
 
 export default function HomePage() {
