@@ -5,7 +5,7 @@
 .nav {
   @include flex-center;
   justify-content: center;
-  border-bottom: $primarycolor3 2px solid;
+  border-bottom: $secondarycolor3 2px solid;
 
   @include media-desktop {
     @include flex-center;
