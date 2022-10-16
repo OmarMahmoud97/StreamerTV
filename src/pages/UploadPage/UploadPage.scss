@@ -14,7 +14,7 @@
 
     @include media-tablet {
       padding: 1.5rem 0 1.5rem 0;
-      border-bottom: 1px solid grey;
+      border-bottom: 1px solid $secondarycolor3;
       margin-bottom: 1.5rem;
       font-size: 2.5rem;
     }
@@ -90,7 +90,19 @@
     @include media-tablet {
       flex-direction: row;
       justify-content: flex-end;
-      width: 50.75rem;
+      width: 90%;
+    }
+  }
+
+  &__footer-wrapper {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    @include media-tablet {
+      flex-direction: row;
+      justify-content: end;
     }
   }
 
@@ -140,13 +152,17 @@
 
     @include media-tablet {
       width: 9rem;
-      margin-left: 4rem;
+      margin-left: 0rem;
       margin-bottom: 0;
     }
   }
 
   &__button-label {
     text-decoration: none;
+    &--mobile {
+      margin-right: 2rem;
+    }
+
     &--publish {
       width: 100%;
       text-align: center;
@@ -156,6 +172,7 @@
       }
     }
   }
+
   &__button-icon {
     position: absolute;
 

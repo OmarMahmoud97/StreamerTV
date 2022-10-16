@@ -108,28 +108,35 @@ export default function VideoInfo() {
           </div>
         </div>
         <div className="upload__footer">
-          <Link
-            className="upload__button-label upload__button-label--mobile"
-            to="/"
-          >
-            <h4 className="upload__cancel-left">CANCEL</h4>
-          </Link>
-          <Link
-            className="upload__button-label upload__button-label--publish"
-            to="/"
-          >
-            <button className="upload__button" onClick={handleSubmit}>
-              <img
-                className="upload__button-icon"
-                src={uploadIcon}
-                alt="upload icon"
-              />
-              <h4 className="upload__publish">PUBLISH</h4>
-            </button>
-          </Link>
-          <Link className="upload__button-label " to="/">
-            <h4 className="upload__cancel-right ">CANCEL</h4>
-          </Link>
+          <div className="upload__footer-wrapper">
+            {/* //// */}
+            <Link
+              className="upload__button-label upload__button-label--mobile"
+              to="/"
+            >
+              <h4 className="upload__cancel-left">CANCEL</h4>
+            </Link>
+            {/*  */}
+
+            <Link
+              className="upload__button-label upload__button-label--publish"
+              to="/"
+            >
+              <button className="upload__button" onClick={handleSubmit}>
+                <img
+                  className="upload__button-icon"
+                  src={uploadIcon}
+                  alt="upload icon"
+                />
+                <h4 className="upload__publish">PUBLISH</h4>
+              </button>
+            </Link>
+            {/* /// */}
+            <Link className="upload__button-label " to="/">
+              <h4 className="upload__cancel-right ">CANCEL</h4>
+            </Link>
+            {/* /// */}
+          </div>
         </div>
       </section>
     </>
